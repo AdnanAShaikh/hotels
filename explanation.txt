@@ -1,0 +1,37 @@
+############ server.js ###############
+
+server.js is the main file.
+When server.js is started then db.js is also started and the routes become live on server
+
+the routes are a middleware because express.Router() is a middleware function.
+
+
+############ routes ################
+
+module.exports = routes
+
+routes is a const variable which stores all the different person or menu routes in their respective folder
+
+we then import it to server within 2 different variables and then app.use() in server.js to access them.
+
+
+######### auth.js ################
+
+Local Strategy is passport.js function which utilizes only username and password as authentication
+We import Person from models and the comparePassword function
+
+passport.use is a middleware 
+
+after writing authentication logic we then export the passport variable to server js
+
+############# models ###############
+
+in models we store the database schema
+
+then we store that schema in a variable 
+
+then we export that variable in server.js or wherever we need to access that particular database
+for storing, deleting, updating, creating documents/records in the database
+
+in auth.js we use it to access the 
+
